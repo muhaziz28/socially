@@ -15,7 +15,6 @@ import { Avatar } from "./ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
 import { formatDistanceToNow } from "date-fns";
 import { DeleteAlertDialog } from "./DeleteAlertDialog";
-import Image from "next/image";
 import {
   HeartIcon,
   LogInIcon,
@@ -135,7 +134,7 @@ function PostCard({ post, dbUserId }: { post: Post; dbUserId: string | null }) {
           {/* post image */}
           {post.image && (
             <div className="rounded-lg overflow-hidden">
-              <Image
+              <img
                 src={post.image}
                 alt="Post content"
                 className="w-full h-auto object-cover"
